@@ -21,6 +21,7 @@ final pp_status_uuid = "1f3ef3d7-18be-44e5-82f7-ff8d498f4e4b";
 class EvsePilotStatusTile extends StatefulWidget {
   final BluetoothService service;
 
+  //const EvsePilotStatusTile({Key? key, required this.service}) : super(key: key);
   const EvsePilotStatusTile({Key? key, required this.service}) : super(key: key);
   @override
   _EvsePilotStatusTileState createState() => _EvsePilotStatusTileState();
