@@ -125,10 +125,10 @@ class _EvsePilotStatusTileState extends State<EvsePilotStatusTile> {
         });
       }
     }
-    Timer.periodic(Duration(milliseconds: 1000), (timer) {
+    Timer.periodic(Duration(milliseconds: 1000), (timer) async {
       for (BluetoothCharacteristic c in widget.service.characteristics) {
         if (c.uuid.toString() == cp_duty_uuid) {
-          c.read().then((value) {
+          await c.read().then((value) {
             setState(() {
               cpDuty = String.fromCharCodes(value);
               //cpDuty = value.toString();
@@ -136,36 +136,36 @@ class _EvsePilotStatusTileState extends State<EvsePilotStatusTile> {
           });
         }
         if (c.uuid.toString() == cp_voltage_uuid) {
-          c.read().then((value) {
+            await c.read().then((value) {
             setState(() {
               cpVoltage = String.fromCharCodes(value);
               //cpVoltage = value.toString();
             });
-          });
+            });
         }
         if (c.uuid.toString() == cp_status_uuid) {
-          c.read().then((value) {
+            await c.read().then((value) {
             setState(() {
               cpStatus = String.fromCharCodes(value);
               //cpStatus = value.toString();
             });
-          });
+            });
         }
         if (c.uuid.toString() == pp_voltage_uuid) {
-          c.read().then((value) {
+            await c.read().then((value) {
             setState(() {
               ppVoltage = String.fromCharCodes(value);
               //ppVoltage = value.toString();
             });
-          });
+            });
         }
         if (c.uuid.toString() == pp_status_uuid) {
-          c.read().then((value) {
+            await c.read().then((value) {
             setState(() {
               ppStatus = String.fromCharCodes(value);
               //ppStatus = value.toString();
             });
-          });
+            });
         }
       }
       setState(() {
@@ -177,6 +177,7 @@ class _EvsePilotStatusTileState extends State<EvsePilotStatusTile> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.only(left: 10, right: 10),
       child: Column(
         children: [
           SizedBox(height: 10),
@@ -194,7 +195,7 @@ class _EvsePilotStatusTileState extends State<EvsePilotStatusTile> {
                 style: Theme.of(context).textTheme.bodyLarge,
                 ),
               Container(
-                width: 200.0, // Set the desired width here
+                width: 150.0, // Set the desired width here
                 child: TextField(
                   textAlign: TextAlign.right,
                   decoration: InputDecoration(
