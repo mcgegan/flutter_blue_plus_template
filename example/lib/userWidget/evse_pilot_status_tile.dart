@@ -230,7 +230,7 @@ class _EvsePilotStatusTileState extends State<EvsePilotStatusTile> {
                 style: Theme.of(context).textTheme.bodyLarge,
                 ),
                 Text(
-                '${cpDuty} V',
+                '${cpDuty} %',
                 style: Theme.of(context).textTheme.bodyLarge,
                 ),
             ],
