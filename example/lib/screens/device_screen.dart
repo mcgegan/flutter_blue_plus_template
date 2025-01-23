@@ -106,9 +106,10 @@ class _DeviceScreenState extends State<DeviceScreen> {
             }
           }
           for (BluetoothCharacteristic c in s.characteristics) {
-            debugPrint('HHD: characteristic: ${c.uuid}');
+            debugPrint('  HHD: characteristic: ${c.uuid.toString()}');
+            debugPrint('    HHD: properties: ${c.properties.toString()}');
             for (BluetoothDescriptor d in c.descriptors) {
-              debugPrint('HHD: descriptor: ${d.uuid}');
+              debugPrint('      HHD: descriptor: ${d.uuid}');
             }
           }
         }
@@ -322,11 +323,11 @@ class _DeviceScreenState extends State<DeviceScreen> {
                 trailing: buildGetServices(context),
               ),
               Visibility(
-                visible: false,
+                visible: true,
                 child: buildMtuTile(context),
               ),
               Visibility(
-                visible: false,
+                visible: true,
                 child: Column(
                   children: _buildServiceTiles(context, widget.device),
                 ),
@@ -337,6 +338,14 @@ class _DeviceScreenState extends State<DeviceScreen> {
                 color: Colors.grey,
               ),
               userWidget,
+              if (pilotService != null) ...[
+                const Divider(
+                  height: 1.0,
+                  thickness: 1.0,
+                  color: Colors.grey,
+                ),
+                //buildPilotStatusTile(context, pilotService),
+              ],
             ],
           ),
         ),
