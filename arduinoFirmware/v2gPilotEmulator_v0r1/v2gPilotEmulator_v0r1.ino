@@ -209,7 +209,7 @@ void loop() {
     pPPStatusCharacteristic->notify();
     // put your main code here, to run repeatedly:
 
-    delay(100);//delay mS
+    delay(2000);//delay mS
   }
 
   // disconnecting
