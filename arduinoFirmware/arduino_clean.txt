@@ -1,0 +1,4 @@
+1. > arduino-cli board install esp32
+      --> 적용한 보드 이름 확인
+2. > arduino-cli compile -b esp32:esp32:esp32 --clean
+      --> 해당 보드 clean
