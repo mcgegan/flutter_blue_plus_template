@@ -107,7 +107,22 @@ class _DeviceScreenState extends State<DeviceScreen> {
           }
           for (BluetoothCharacteristic c in s.characteristics) {
             debugPrint('  HHD: characteristic: ${c.uuid.toString()}');
-            debugPrint('    HHD: properties: ${c.properties.toString()}');
+            for (var p in [
+              c.properties.broadcast,
+              c.properties.read,
+              c.properties.writeWithoutResponse,
+              c.properties.write,
+              c.properties.notify,
+              c.properties.indicate,
+              c.properties.authenticatedSignedWrites,
+              c.properties.extendedProperties,
+              c.properties.notifyEncryptionRequired,
+              c.properties.indicateEncryptionRequired
+            ]) {
+                debugPrint('    HHD: property: ${p.toString()} ');
+
+            }
+            //debugPrint('    HHD: properties: ${c.properties.toString()}');
             for (BluetoothDescriptor d in c.descriptors) {
               debugPrint('      HHD: descriptor: ${d.uuid}');
             }

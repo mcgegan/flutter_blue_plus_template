@@ -29,10 +29,10 @@ class EvsePilotStatusTile extends StatefulWidget {
 
 class _EvsePilotStatusTileState extends State<EvsePilotStatusTile> {
   late StreamSubscription<List<int>> _cpDutyCharacteristicSubscription;
-  late StreamSubscription<bool> _cpVoltageCharacteristicIsRead;
-  late StreamSubscription<bool> _cpStatusCharacteristicIsRead;
-  late StreamSubscription<bool> _ppVoltageCharacteristicIsRead;
-  late StreamSubscription<bool> _ppStatusCharacteristicIsRead;
+  late StreamSubscription<List<int>> _cpVoltageCharacteristicSubscription;
+  late StreamSubscription<List<int>> _cpStatusCharacteristicSubscription;
+  late StreamSubscription<List<int>> _ppVoltageCharacteristicSubscription;
+  late StreamSubscription<List<int>> _ppStatusCharacteristicSubscription;
 
   late BluetoothCharacteristic cpDutyCharacteristic;
   late BluetoothCharacteristic cpVoltageCharacteristic;
@@ -99,11 +99,6 @@ class _EvsePilotStatusTileState extends State<EvsePilotStatusTile> {
             cpDuty = String.fromCharCodes(value);
           });
         });
-        debugPrint('HHD uuid=    ${c.uuid.toString()}');
-        debugPrint('HHD read=    ${c.properties.read.toString()}');
-        debugPrint('HHD write=   ${c.properties.write.toString()}');
-        debugPrint('HHD notify=  ${c.properties.notify.toString()}');
-        debugPrint('HHD indicate=${c.properties.indicate.toString()}');
       }
       if (c.uuid.toString() == cp_voltage_uuid) {
         cpVoltageCharacteristic = c;
@@ -112,11 +107,6 @@ class _EvsePilotStatusTileState extends State<EvsePilotStatusTile> {
             cpVoltage = String.fromCharCodes(value);
           });
         });
-        debugPrint('HHD uuid=    ${c.uuid.toString()}');
-        debugPrint('HHD read=    ${c.properties.read.toString()}');
-        debugPrint('HHD write=   ${c.properties.write.toString()}');
-        debugPrint('HHD notify=  ${c.properties.notify.toString()}');
-        debugPrint('HHD indicate=${c.properties.indicate.toString()}');
       }
       if (c.uuid.toString() == cp_status_uuid) {
         cpStatusCharacteristic = c;
@@ -125,11 +115,6 @@ class _EvsePilotStatusTileState extends State<EvsePilotStatusTile> {
             cpStatus = String.fromCharCodes(value);
           });
         });
-        debugPrint('HHD uuid=    ${c.uuid.toString()}');
-        debugPrint('HHD read=    ${c.properties.read.toString()}');
-        debugPrint('HHD write=   ${c.properties.write.toString()}');
-        debugPrint('HHD notify=  ${c.properties.notify.toString()}');
-        debugPrint('HHD indicate=${c.properties.indicate.toString()}');
       }
       if (c.uuid.toString() == pp_voltage_uuid) {
         ppVoltageCharacteristic = c;
@@ -138,11 +123,6 @@ class _EvsePilotStatusTileState extends State<EvsePilotStatusTile> {
             ppVoltage = String.fromCharCodes(value);
           });
         });
-        debugPrint('HHD uuid=    ${c.uuid.toString()}');
-        debugPrint('HHD read=    ${c.properties.read.toString()}');
-        debugPrint('HHD write=   ${c.properties.write.toString()}');
-        debugPrint('HHD notify=  ${c.properties.notify.toString()}');
-        debugPrint('HHD indicate=${c.properties.indicate.toString()}');
       }
       if (c.uuid.toString() == pp_status_uuid) {
         ppStatusCharacteristic = c;
@@ -151,35 +131,86 @@ class _EvsePilotStatusTileState extends State<EvsePilotStatusTile> {
             ppStatus = String.fromCharCodes(value);
           });
         });
-        debugPrint('HHD uuid=    ${c.uuid.toString()}');
-        debugPrint('HHD read=    ${c.properties.read.toString()}');
-        debugPrint('HHD write=   ${c.properties.write.toString()}');
-        debugPrint('HHD notify=  ${c.properties.notify.toString()}');
-        debugPrint('HHD indicate=${c.properties.indicate.toString()}');
       }
     }
 
-
-    _cpDutyCharacteristicSubscription = cpDutyCharacteristic.lastValueStream.listen((event) {
-      debugPrint('event: ${event.toString()}');
-      for (int i in event) {
-        debugPrint(i.toString());
-      }
-      /*
+    _cpDutyCharacteristicSubscription = cpDutyCharacteristic.lastValueStream.listen((value) {
       setState(() {
-        cpDuty = String.fromCharCodes(event);
+        cpDuty = String.fromCharCodes(value);
       });
-      */
+      debugPrint("cpDuty =: ${cpDuty}");
     });
-    //_cpVoltageCharacteristicIsRead;
-    //_cpStatusCharacteristicIsRead;
-    //_ppVoltageCharacteristicIsRead;
-    //_ppStatusCharacteristicIsRead;
+    _cpVoltageCharacteristicSubscription = cpVoltageCharacteristic.lastValueStream.listen((value) {
+      setState(() {
+        cpVoltage = String.fromCharCodes(value);
+      });
+      debugPrint("cpVoltage =: ${cpVoltage}");
+    });
+    _cpStatusCharacteristicSubscription = cpStatusCharacteristic.lastValueStream.listen((value) {
+      setState(() {
+        cpStatus = String.fromCharCodes(value);
+      });
+      debugPrint("cpStatus =: ${cpStatus}");
+    });
+    _ppVoltageCharacteristicSubscription = ppVoltageCharacteristic.lastValueStream.listen((value) {
+      setState(() {
+        ppVoltage = String.fromCharCodes(value);
+      });
+      debugPrint("ppVoltage =: ${ppVoltage}");
+    });
+    _ppStatusCharacteristicSubscription = ppStatusCharacteristic.lastValueStream.listen((value) {
+      setState(() {
+        ppStatus = String.fromCharCodes(value);
+      });
+      debugPrint("ppStatus =: ${ppStatus}");
+    });
 
-
-
+    try {
+      cpDutyCharacteristic.setNotifyValue(cpDutyCharacteristic.isNotifying == false);
+      if (cpDutyCharacteristic.properties.read) {
+        cpDutyCharacteristic.read();
+      }
+    } catch (e) {
+      print(e);
+    }
+    try {
+      cpVoltageCharacteristic.setNotifyValue(cpVoltageCharacteristic.isNotifying == false);
+      if (cpVoltageCharacteristic.properties.read) {
+        cpVoltageCharacteristic.read();
+      }
+    } catch (e) {
+      print(e);
+    }
+    try {
+      cpStatusCharacteristic.setNotifyValue(cpStatusCharacteristic.isNotifying == false);
+      if (cpStatusCharacteristic.properties.read) {
+        cpStatusCharacteristic.read();
+      }
+    } catch (e) {
+      print(e);
+    }
+    try {
+      ppVoltageCharacteristic.setNotifyValue(ppVoltageCharacteristic.isNotifying == false);
+      if (ppVoltageCharacteristic.properties.read) {
+        ppVoltageCharacteristic.read();
+      }
+    } catch (e) {
+      print(e);
+    }
+    try {
+      ppStatusCharacteristic.setNotifyValue(ppStatusCharacteristic.isNotifying == false);
+      if (ppStatusCharacteristic.properties.read) {
+        ppStatusCharacteristic.read();
+      }
+    } catch (e) {
+      print(e);
+    }
 
     Timer.periodic(Duration(milliseconds: 1000), (timer) async {
+
+      /*********************** */
+      /* periodic read example */
+      /*************************/
       /*
       for (BluetoothCharacteristic c in widget.service.characteristics) {
         if (c.uuid.toString() == cp_duty_uuid) {
@@ -222,45 +253,10 @@ class _EvsePilotStatusTileState extends State<EvsePilotStatusTile> {
             });
             });
         }
-
-        
       }
       */
-
-
-
-      /*
-      for (BluetoothCharacteristic c in widget.service.characteristics) {
-        var _isNotify = c.properties.notify;
-        var _isIndicate = c.properties.indicate;
-        var _isRead = c.properties.read;
-        var _isWrite = c.properties.write;
-        var _isBroadcast = c.properties.broadcast;
-        debugPrint('_isNotigy: $_isNotify');
-        debugPrint('_isIndicate: $_isIndicate');
-        debugPrint('_isRead: $_isRead');
-        debugPrint('_isWrite: $_isWrite');
-        debugPrint('_isBroadcast: $_isBroadcast');
-        
-
-        if (c.uuid.toString() == cp_duty_uuid) {
-        }
-        if (c.uuid.toString() == cp_voltage_uuid) {
-        }
-        if (c.uuid.toString() == cp_status_uuid) {
-        }
-        if (c.uuid.toString() == pp_voltage_uuid) {
-        }
-
-        
-      }
-      */
-
-
-
 
       setState(() {
-        //debugPrint('evse_pilot_status_tile');
       });
     });
   }
