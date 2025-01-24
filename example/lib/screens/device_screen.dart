@@ -12,7 +12,6 @@ import '../utils/extra.dart';
 
 //added by hhd begin
 import '../userWidget/evse_pilot_status_tile.dart';
-import '../userWidget/blank_tile.dart';
 //added by hhd end
 
 class DeviceScreen extends StatefulWidget {
@@ -36,7 +35,6 @@ class _DeviceScreenState extends State<DeviceScreen> {
   List<BluetoothDescriptor> _descriptors = [];
   List<BluetoothCharacteristic> _characteristics = [];
   //late EvsePilotStatusTile evsePilotStatusTile;// = EvsePilotStatusTile();
-  Widget userWidget = BlankTile();
   
   BluetoothService? pilotService;
   Timer? pilotReadTimer;
@@ -128,9 +126,11 @@ class _DeviceScreenState extends State<DeviceScreen> {
             }
           }
         }
+        /*
         if (pilotService != null) {
           userWidget = buildPilotStatusTile(context, pilotService);
         }
+        */
         timer.cancel();
         
         return;
@@ -352,14 +352,14 @@ class _DeviceScreenState extends State<DeviceScreen> {
                 thickness: 1.0,
                 color: Colors.grey,
               ),
-              userWidget,
+              buildPilotStatusTile(context, pilotService),
               if (pilotService != null) ...[
                 const Divider(
                   height: 1.0,
                   thickness: 1.0,
                   color: Colors.grey,
                 ),
-                //buildPilotStatusTile(context, pilotService),
+
               ],
             ],
           ),
