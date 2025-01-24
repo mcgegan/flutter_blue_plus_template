@@ -24,11 +24,11 @@
 		11BD5E86DFD50D279A0CF0D07617DA39 /* Pods-Runner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E794494AB90477BA94C681E994ADF341 /* Pods-Runner-dummy.m */; };
 		4A27AA22A4E0B27AEA5FC988794F0DF9 /* flutter_blue_plus_macos-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CA14E0A5F042593827B0B89168A96C71 /* flutter_blue_plus_macos-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		53A1DA777A1910BFFAB489DD7D05FFDC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB836FD2882A73FE14C0849284B0CB88 /* Cocoa.framework */; };
-		93C0B4298A757D2A3525AA8A882E7108 /* FlutterBluePlusPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 26989B678648607A2F8421EF0922DD32 /* FlutterBluePlusPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		93C0B4298A757D2A3525AA8A882E7108 /* FlutterBluePlusPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = E01A4F44D20451978388720446531558 /* FlutterBluePlusPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD6F21FA7D143DC4971721D33BAD6A1B /* flutter_blue_plus_macos-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A1925B44671EBD80842064755C85305C /* flutter_blue_plus_macos-dummy.m */; };
 		B0D3F97E9170BDCAD523CB7FAA11A6AF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB836FD2882A73FE14C0849284B0CB88 /* Cocoa.framework */; };
 		B375EA128E6579366091BAA390BBDD34 /* Pods-RunnerTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3DB54C128E3D88C0C9C7DDEA475ED7 /* Pods-RunnerTests-dummy.m */; };
-		DCE7C4AF28246BC0CD6EE4454B33B343 /* FlutterBluePlusPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = F5424879EE87F818F93E1A57D1E4E280 /* FlutterBluePlusPlugin.m */; };
+		DCE7C4AF28246BC0CD6EE4454B33B343 /* FlutterBluePlusPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A31583777618CD75723E7BA1B800A1 /* FlutterBluePlusPlugin.m */; };
 		DEC0055D70575DA70D5354B4EFF4EFCD /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9CAF88E5546B5E7AB891371E4755AD6 /* CoreBluetooth.framework */; };
 		EB2DC96CDCF638AB89007D2DB0F3119A /* Pods-RunnerTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E9B12BCE5540D02A80250C3EC16D399 /* Pods-RunnerTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -69,7 +69,6 @@
 		0AFB643DA4919253F749E2836A5AAFDC /* Pods-Runner-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Runner-Info.plist"; sourceTree = "<group>"; };
 		11AA7018F95317D959D9D2E76CBB2377 /* Pods-RunnerTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RunnerTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		1B136F41D5B5FAE96EA576E768A5771D /* Pods-Runner-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Runner-acknowledgements.plist"; sourceTree = "<group>"; };
-		26989B678648607A2F8421EF0922DD32 /* FlutterBluePlusPlugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlutterBluePlusPlugin.h; path = "../../../../../../../../../../../.pub-cache/hosted/pub.dev/flutter_blue_plus_macos-1.35.0/macos/Classes/FlutterBluePlusPlugin.h"; sourceTree = "<group>"; };
 		2B0D0469E1015CF40D7D2B04C66623F9 /* FlutterMacOS.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = FlutterMacOS.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3A80EEB07D4C27CBD0DA8877FF091C74 /* flutter_blue_plus_macos-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "flutter_blue_plus_macos-prefix.pch"; sourceTree = "<group>"; };
 		40C51014DB89F447D73A951393B1C376 /* flutter_blue_plus_macos-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "flutter_blue_plus_macos-Info.plist"; sourceTree = "<group>"; };
@@ -82,6 +81,7 @@
 		773BFCE41424EB8EBB72EF3F6A5FB719 /* Pods-Runner-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Runner-frameworks.sh"; sourceTree = "<group>"; };
 		77441B1B33ED779DAFC748060A008E51 /* flutter_blue_plus_macos */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = flutter_blue_plus_macos; path = flutter_blue_plus_macos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F83F4D505FA40C1CD18A8029181D59 /* Pods-RunnerTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RunnerTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		89A31583777618CD75723E7BA1B800A1 /* FlutterBluePlusPlugin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FlutterBluePlusPlugin.m; path = "../../../../../../../../../../../.pub-cache/hosted/pub.dev/flutter_blue_plus_macos-1.35.0/macos/Classes/FlutterBluePlusPlugin.m"; sourceTree = "<group>"; };
 		9636D78729F063C491D4B66D529F0FE9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/flutter_blue_plus_macos-1.35.0/LICENSE"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E9B12BCE5540D02A80250C3EC16D399 /* Pods-RunnerTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RunnerTests-umbrella.h"; sourceTree = "<group>"; };
@@ -98,12 +98,12 @@
 		C50FD10CD19FF6999637BA5ECAF1681B /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
 		CA14E0A5F042593827B0B89168A96C71 /* flutter_blue_plus_macos-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "flutter_blue_plus_macos-umbrella.h"; sourceTree = "<group>"; };
 		D843E6391F06B6C3D5C95CE381649004 /* flutter_blue_plus_macos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = flutter_blue_plus_macos.release.xcconfig; sourceTree = "<group>"; };
+		E01A4F44D20451978388720446531558 /* FlutterBluePlusPlugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlutterBluePlusPlugin.h; path = "../../../../../../../../../../../.pub-cache/hosted/pub.dev/flutter_blue_plus_macos-1.35.0/macos/Classes/FlutterBluePlusPlugin.h"; sourceTree = "<group>"; };
 		E48BFF13320DF8CA8659466BD51E0E9D /* flutter_blue_plus_macos.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = flutter_blue_plus_macos.podspec; path = "../../../../../../../../../../.pub-cache/hosted/pub.dev/flutter_blue_plus_macos-1.35.0/macos/flutter_blue_plus_macos.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E736E0C9C5B73D27B8865E363E2108AC /* Pods-RunnerTests.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RunnerTests.profile.xcconfig"; sourceTree = "<group>"; };
 		E794494AB90477BA94C681E994ADF341 /* Pods-Runner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Runner-dummy.m"; sourceTree = "<group>"; };
 		EB836FD2882A73FE14C0849284B0CB88 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		ECDF6AA713870989438BA93B395DC557 /* Pods-Runner-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Runner-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F5424879EE87F818F93E1A57D1E4E280 /* FlutterBluePlusPlugin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FlutterBluePlusPlugin.m; path = "../../../../../../../../../../../.pub-cache/hosted/pub.dev/flutter_blue_plus_macos-1.35.0/macos/Classes/FlutterBluePlusPlugin.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,15 +144,6 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		171AE82FCAA87C2CDA837A6078B31C86 /* Flutter */ = {
-			isa = PBXGroup;
-			children = (
-				543FB854DA36844D2E0C36915CDD0BA5 /* ephemeral */,
-			);
-			name = Flutter;
-			path = Flutter;
-			sourceTree = "<group>";
-		};
 		17BE483E1383E09A6CDB9C258A23C4DE /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,15 +151,6 @@
 				47B2BBB153ACC92611FA43E3E6EBA58F /* FlutterMacOS */,
 			);
 			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		1E6FF0E6F54F684CE81DD8C38B7B380A /* macos */ = {
-			isa = PBXGroup;
-			children = (
-				FBB4F29E18C9DB74F4CCD13914ED1093 /* Classes */,
-			);
-			name = macos;
-			path = macos;
 			sourceTree = "<group>";
 		};
 		24275797911DCC7234DA4956AD2E53C1 /* .. */ = {
@@ -189,6 +171,15 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		2E460B7A9AB1E29286555F2C90BB0E5A /* flutter_blue_plus_template */ = {
+			isa = PBXGroup;
+			children = (
+				B5150862F0238A1CD3983A4C61858CD1 /* example */,
+			);
+			name = flutter_blue_plus_template;
+			path = flutter_blue_plus_template;
+			sourceTree = "<group>";
+		};
 		33D0D848ED2F4EA6C8AB3D732FFF22A2 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +195,33 @@
 			path = "../../../../../../Pods/Target Support Files/flutter_blue_plus_macos";
 			sourceTree = "<group>";
 		};
+		347469E10C49365B2F5610E38DCCB4B6 /* macos */ = {
+			isa = PBXGroup;
+			children = (
+				F665C618081BFBF129883DA98415A0A5 /* Flutter */,
+			);
+			name = macos;
+			path = macos;
+			sourceTree = "<group>";
+		};
+		3D83F69B7504CD960D29AB5C96F48E53 /* macos */ = {
+			isa = PBXGroup;
+			children = (
+				F23EBCAB495D3B30608F3E845877F478 /* Classes */,
+			);
+			name = macos;
+			path = macos;
+			sourceTree = "<group>";
+		};
+		4673028EF293A947DB7E3149269992F3 /* flutter_blue_plus_macos */ = {
+			isa = PBXGroup;
+			children = (
+				3D83F69B7504CD960D29AB5C96F48E53 /* macos */,
+			);
+			name = flutter_blue_plus_macos;
+			path = flutter_blue_plus_macos;
+			sourceTree = "<group>";
+		};
 		47B2BBB153ACC92611FA43E3E6EBA58F /* FlutterMacOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +230,15 @@
 			);
 			name = FlutterMacOS;
 			path = ../Flutter/ephemeral;
+			sourceTree = "<group>";
+		};
+		49436AD1ECC9C239A08BC22DF8337630 /* workspace */ = {
+			isa = PBXGroup;
+			children = (
+				2E460B7A9AB1E29286555F2C90BB0E5A /* flutter_blue_plus_template */,
+			);
+			name = workspace;
+			path = workspace;
 			sourceTree = "<group>";
 		};
 		537E840C4F4E30B706FD9D64B15C53A7 /* Pods-RunnerTests */ = {
@@ -231,13 +258,13 @@
 			path = "Target Support Files/Pods-RunnerTests";
 			sourceTree = "<group>";
 		};
-		543FB854DA36844D2E0C36915CDD0BA5 /* ephemeral */ = {
+		5CDEF33BA100D2D159581DE8BCF5113F /* plugins */ = {
 			isa = PBXGroup;
 			children = (
-				BA0FF17B8DFAB1553CD0740643C76CFF /* .symlinks */,
+				4673028EF293A947DB7E3149269992F3 /* flutter_blue_plus_macos */,
 			);
-			name = ephemeral;
-			path = ephemeral;
+			name = plugins;
+			path = plugins;
 			sourceTree = "<group>";
 		};
 		5EA1F9CC52FD50EAD09CFF4D3D07B61E /* OS X */ = {
@@ -247,6 +274,33 @@
 				A9CAF88E5546B5E7AB891371E4755AD6 /* CoreBluetooth.framework */,
 			);
 			name = "OS X";
+			sourceTree = "<group>";
+		};
+		60AD4478A15BA2F39A5364B5621B4207 /* .symlinks */ = {
+			isa = PBXGroup;
+			children = (
+				5CDEF33BA100D2D159581DE8BCF5113F /* plugins */,
+			);
+			name = .symlinks;
+			path = .symlinks;
+			sourceTree = "<group>";
+		};
+		6995D2ACE37DCC1E923F3C370F828B6A /* ephemeral */ = {
+			isa = PBXGroup;
+			children = (
+				60AD4478A15BA2F39A5364B5621B4207 /* .symlinks */,
+			);
+			name = ephemeral;
+			path = ephemeral;
+			sourceTree = "<group>";
+		};
+		70695C2BD6DDFE07DF42863FD4B2B3EE /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				49436AD1ECC9C239A08BC22DF8337630 /* workspace */,
+			);
+			name = ..;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		70E46DF613DEFD191276D2D93D11220D /* Support Files */ = {
@@ -269,33 +323,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7AD7885B863E8E356AC0D2C36D350396 /* flutter_blue_plus_template */ = {
-			isa = PBXGroup;
-			children = (
-				A3A35F68B2D04DAAD8C8609BA9164DE5 /* example */,
-			);
-			name = flutter_blue_plus_template;
-			path = flutter_blue_plus_template;
-			sourceTree = "<group>";
-		};
-		833579AA37E4279D28CB0E28D9D5005D /* .. */ = {
-			isa = PBXGroup;
-			children = (
-				F8B7121AEDD3D7C5433BB4420DB3C100 /* development */,
-			);
-			name = ..;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		854D42A34AD55A72750C19D865F2C265 /* plugins */ = {
-			isa = PBXGroup;
-			children = (
-				8F86F0EC8872939E09BDB321E35F68D0 /* flutter_blue_plus_macos */,
-			);
-			name = plugins;
-			path = plugins;
-			sourceTree = "<group>";
-		};
 		8B39552B30D62203B02B23040F084357 /* .. */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,24 +330,6 @@
 			);
 			name = ..;
 			path = ..;
-			sourceTree = "<group>";
-		};
-		8F86F0EC8872939E09BDB321E35F68D0 /* flutter_blue_plus_macos */ = {
-			isa = PBXGroup;
-			children = (
-				1E6FF0E6F54F684CE81DD8C38B7B380A /* macos */,
-			);
-			name = flutter_blue_plus_macos;
-			path = flutter_blue_plus_macos;
-			sourceTree = "<group>";
-		};
-		A3A35F68B2D04DAAD8C8609BA9164DE5 /* example */ = {
-			isa = PBXGroup;
-			children = (
-				AF68685AE5BC19D68CC65FC4A421C924 /* macos */,
-			);
-			name = example;
-			path = example;
 			sourceTree = "<group>";
 		};
 		A3F3EAB1DFF597756B2AA502E471E3AC /* flutter_blue_plus_macos */ = {
@@ -334,28 +343,19 @@
 			path = ../Flutter/ephemeral/.symlinks/plugins/flutter_blue_plus_macos/macos;
 			sourceTree = "<group>";
 		};
-		AF68685AE5BC19D68CC65FC4A421C924 /* macos */ = {
+		B5150862F0238A1CD3983A4C61858CD1 /* example */ = {
 			isa = PBXGroup;
 			children = (
-				171AE82FCAA87C2CDA837A6078B31C86 /* Flutter */,
+				347469E10C49365B2F5610E38DCCB4B6 /* macos */,
 			);
-			name = macos;
-			path = macos;
-			sourceTree = "<group>";
-		};
-		BA0FF17B8DFAB1553CD0740643C76CFF /* .symlinks */ = {
-			isa = PBXGroup;
-			children = (
-				854D42A34AD55A72750C19D865F2C265 /* plugins */,
-			);
-			name = .symlinks;
-			path = .symlinks;
+			name = example;
+			path = example;
 			sourceTree = "<group>";
 		};
 		BA78A7FCEF8F2F717B184E23F7B94693 /* .. */ = {
 			isa = PBXGroup;
 			children = (
-				833579AA37E4279D28CB0E28D9D5005D /* .. */,
+				70695C2BD6DDFE07DF42863FD4B2B3EE /* .. */,
 			);
 			name = ..;
 			path = ..;
@@ -406,6 +406,25 @@
 			path = "Target Support Files/Pods-Runner";
 			sourceTree = "<group>";
 		};
+		F23EBCAB495D3B30608F3E845877F478 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E01A4F44D20451978388720446531558 /* FlutterBluePlusPlugin.h */,
+				89A31583777618CD75723E7BA1B800A1 /* FlutterBluePlusPlugin.m */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F665C618081BFBF129883DA98415A0A5 /* Flutter */ = {
+			isa = PBXGroup;
+			children = (
+				6995D2ACE37DCC1E923F3C370F828B6A /* ephemeral */,
+			);
+			name = Flutter;
+			path = Flutter;
+			sourceTree = "<group>";
+		};
 		F7300F7A0F991149C89E6E91137E5927 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
@@ -415,15 +434,6 @@
 			name = Pod;
 			sourceTree = "<group>";
 		};
-		F8B7121AEDD3D7C5433BB4420DB3C100 /* development */ = {
-			isa = PBXGroup;
-			children = (
-				7AD7885B863E8E356AC0D2C36D350396 /* flutter_blue_plus_template */,
-			);
-			name = development;
-			path = development;
-			sourceTree = "<group>";
-		};
 		FA3D557D4381912F275C78429412E490 /* .. */ = {
 			isa = PBXGroup;
 			children = (
@@ -431,16 +441,6 @@
 			);
 			name = ..;
 			path = ..;
-			sourceTree = "<group>";
-		};
-		FBB4F29E18C9DB74F4CCD13914ED1093 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				26989B678648607A2F8421EF0922DD32 /* FlutterBluePlusPlugin.h */,
-				F5424879EE87F818F93E1A57D1E4E280 /* FlutterBluePlusPlugin.m */,
-			);
-			name = Classes;
-			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
